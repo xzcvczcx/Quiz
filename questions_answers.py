@@ -2,7 +2,7 @@ from random import randint
 
 # Number checker function
 def num_check (question):
-  error = "Please enter a whole number"
+  error = "Please enter a whole number \n"
 
   valid = False
   while not valid:
@@ -20,6 +20,6 @@ while True:
   product = num1 * num2
   response = num_check(f'What is {num1} x {num2}? = ')
   if response == product:
-    print("Correct!")
+    print("Correct! \n")
   else:
-    print("Incorrect..")
+    print("Incorrect.. \n")
