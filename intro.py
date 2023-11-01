@@ -27,7 +27,7 @@ varying from 1x - 10x tables-tables.
 
 >(1 life score will be taken off upon answering a question incorrect )
   
-> (You will recieve a point the aim is to get 21 points)""")
+> (The goal is to complete all 21 questions without losing a life score)""")
 
 # Main Routine
 

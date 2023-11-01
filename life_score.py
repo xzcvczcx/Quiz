@@ -2,7 +2,7 @@ from random import randint
 
 round = 0
 
-score = 0
+score = 2
 
 # Number checker function
 def num_check (question):
@@ -18,6 +18,7 @@ def num_check (question):
     except ValueError:
       print(error)
 
+# Game loop + Score count
 while True:
   round += 1
   print("Round {}".format(round))
@@ -30,5 +31,11 @@ while True:
   else:
     print("Incorrect..")
     score -=1
-  print("Life score: {}".format(score))
+  print("Life score: {} \n".format(score))
 
+# End of game when run out of lives
+  if score == 0:
+    print("you dead L try again never back down never what?""")
+    break
+    
+print("well done you got {} rounds".format(round))
