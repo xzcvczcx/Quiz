@@ -1,1 +1,1 @@
-import life_score
+import base

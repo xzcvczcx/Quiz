@@ -16,9 +16,12 @@ def yes_no (question):
      else:
          print("Please answer the question with Yes or No \n")
 
-# Introduction welcome user to quiz and tell them what it is
 
 from random import randint
+
+round = 0
+
+score = 2
 
 # Number checker function
 def num_check (question):
@@ -34,12 +37,13 @@ def num_check (question):
     except ValueError:
       print(error)
 # Tell user what quiz is
+# Introduction welcome user to quiz and tell them what it is
 def instruction():
   print()
   print("Welcome to a Mathematic quiz :D ")
   print("""In this quiz you will be tested with 21 questions
 about times tables questions, 
-varying from 1x - 10x tables-tables.
+varying from 1x - 10x times-tables.
 
 - You will have a life score of 2:
 
@@ -59,12 +63,28 @@ if played_before == "no":
 print()
 print("Beginning Quiz.... \n")
 
+# Game loop + Score count
 while True:
-  num1 = randint(1,10)
-  num2 = randint(1,10)
+  round += 1
+  print("Round {}".format(round))
+  num1 = randint(1, 10)
+  num2 = randint(1, 10)
   product = num1 * num2
   response = num_check(f'What is {num1} x {num2}? = ')
   if response == product:
     print("Correct!")
   else:
     print("Incorrect..")
+    score -= 1
+  print("Life score: {} \n".format(score))
+
+  # End of game when run out of lives
+  if score == 0:
+    print("you dead try again never back down never what?"
+          "")
+    break
+  if round == 21:
+    print("Congratulations you have completed the quiz")
+    break
+print("you reached {} rounds".format(round))
+  # Once user reaches round 21 break out of loop
